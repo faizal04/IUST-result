@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.result-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.code-form {
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+}
+
+.form-actions {
+    margin-top: 20px;
+}
+
+.btn-get-details,
+.btn-reset {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-get-details {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-reset {
+    background-color: #ffc107;
+    color: white;
+}
+
+.results-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+.results-table th,
+.results-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.results-table th {
+    background-color: #333;
+    color: white;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .result-section {
+        padding: 10px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    .results-table {
+        font-size: 12px;
+    }
+}
+
+/* Darken the input fields for Name and Parentage */
+.student-info input {
+    background-color: #e9ecef;
+    /* Slightly dark gray */
+    color: black;
+    /* Black text color */
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    /* Subtle border */
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    /* Inner shadow for depth */
+    text-align: center;
+    /* Center text inside */
+}
+
+.student-info input[readonly] {
+    cursor: not-allowed;
+    /* Indicate it's not editable */
+}
+
+/* Hide the expanded table by default */
+.hidden {
+    display: none;
+}
+
+.result-table {
+    margin: 20px 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.result-table table {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.result-table th,
+.result-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.result-table th {
+    background-color: #f4f4f4;
+}
+
+/* Add hover effect */
+.result-table a {
+    text-decoration: none;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.result-table a:hover {
+    text-decoration: underline;
+}
+
+/* Hide all other navigation items except Login and Logout for mobile screens */
+@media (max-width: 768px) {
+    .navbar-items {
+        display: none;
+    }
+
+    .navbar-auth {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+/* Default styles for header on larger screens */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar-items,
+.navbar-auth {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-items a,
+.navbar-auth a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar-items a:hover,
+.navbar-auth a:hover {
+    background-color: #555;
+}
+
+.hidden-section {
+    display: none;
+}
+
+.login-container {
+    display: block;
+}
+
+/* Mobile-specific styling */
+@media (max-width: 768px) {
+
+    /* Hide main navigation and only show the login form */
+    .navbar-items {
+        display: none;
+    }
+
+    /* Style the login form */
+    .login-container {
+        margin: 20px;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style inputs to look like in the screenshot */
+    .login-container input[type="text"],
+    .login-container input[type="password"],
+    .login-container input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    /* Style buttons */
+    .login-container .btn-login {
+        background-color: #4CAF50;
+        color: white;
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .login-container .btn-reset {
+        background-color: #f0ad4e;
+        color: white;
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Center the form elements */
+    .login-container form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Style for the Remember Me checkbox */
+    .login-container label {
+        display: block;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+
+    /* Add padding for copyright section */
+    .footer {
+        padding: 10px;
+        text-align: center;
+        background-color: #002F6C;
+        color: white;
+        font-size: 14px;
+    }
+}
